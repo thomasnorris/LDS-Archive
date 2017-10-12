@@ -5,16 +5,16 @@ package stablematching;
 import java.io.*;
 import java.util.*;
 public class StableMatching {
-    private static LinkedList<String> brianPrefList = new LinkedList<>();
-    private static LinkedList<String> georgePrefList = new LinkedList<>();
-    private static LinkedList<String> johnPrefList = new LinkedList<>();
-    private static LinkedList<String> robertPrefList = new LinkedList<>();
-    private static LinkedList<String> stephanPrefList = new LinkedList<>();
-    private static LinkedList<String> annePrefList = new LinkedList<>();
-    private static LinkedList<String> joycePrefList = new LinkedList<>();
-    private static LinkedList<String> nancyPrefList = new LinkedList<>();
-    private static LinkedList<String> patriciaPrefList = new LinkedList<>();
-    private static LinkedList<String> susanPrefList = new LinkedList<>();
+    private static LinkedList<String> man1PrefList = new LinkedList<>();
+    private static LinkedList<String> man2PrefList = new LinkedList<>();
+    private static LinkedList<String> man3PrefList = new LinkedList<>();
+    private static LinkedList<String> man4PrefList = new LinkedList<>();
+    private static LinkedList<String> man5PrefList = new LinkedList<>();
+    private static LinkedList<String> woman1PrefList = new LinkedList<>();
+    private static LinkedList<String> woman2PrefList = new LinkedList<>();
+    private static LinkedList<String> woman3PrefList = new LinkedList<>();
+    private static LinkedList<String> woman4PrefList = new LinkedList<>();
+    private static LinkedList<String> woman5PrefList = new LinkedList<>();
     private static LinkedList<String> menList = new LinkedList<>();
     private static LinkedList<String> womenList = new LinkedList<>();
     private static LinkedList<String> engagedMenList = new LinkedList<>();
@@ -106,24 +106,24 @@ public class StableMatching {
             man = menList.get(count);
             
             if (man.equals("Brian"))
-                woman = brianPrefList.get(numProposals);
+                woman = man1PrefList.get(numProposals);
             else if (man.equals("George"))
-                woman = georgePrefList.get(numProposals);
+                woman = man2PrefList.get(numProposals);
             else if (man.equals("John"))
-                woman = johnPrefList.get(numProposals);
+                woman = man3PrefList.get(numProposals);
             else if (man.equals("Robert"))
-                woman = robertPrefList.get(numProposals);
-            else woman = stephanPrefList.get(numProposals);
+                woman = man4PrefList.get(numProposals);
+            else woman = man5PrefList.get(numProposals);
             
             if (woman.equals("Anne"))
-                womanPrefList = annePrefList;
+                womanPrefList = woman1PrefList;
             else if (woman.equals("Joyce"))
-                womanPrefList = joycePrefList;
+                womanPrefList = woman2PrefList;
             else if (woman.equals("Nancy"))
-                womanPrefList = nancyPrefList;
+                womanPrefList = woman3PrefList;
             else if (woman.equals("Patricia"))
-                womanPrefList = patriciaPrefList;
-            else womanPrefList = susanPrefList;
+                womanPrefList = woman4PrefList;
+            else womanPrefList = woman5PrefList;
             
             if (!engagedWomenList.contains(woman)) {
                 engagedMenList.add(man);
@@ -154,24 +154,24 @@ public class StableMatching {
         while (!engagedWomenList.contains(woman) && numProposals < 4) {
             woman = womenList.get(count);
             if (woman.equals("Anne"))
-                man = annePrefList.get(numProposals);
+                man = woman1PrefList.get(numProposals);
             else if (woman.equals("Joyce"))
-                man = joycePrefList.get(numProposals);
+                man = woman2PrefList.get(numProposals);
             else if (woman.equals("Nancy"))
-                man = nancyPrefList.get(numProposals);
+                man = woman3PrefList.get(numProposals);
             else if (woman.equals("Patricia"))
-                man = patriciaPrefList.get(numProposals);
-            else man = susanPrefList.get(numProposals);
+                man = woman4PrefList.get(numProposals);
+            else man = woman5PrefList.get(numProposals);
             
             if (man.equals("Brian"))
-                manPrefList = brianPrefList;
+                manPrefList = man1PrefList;
             else if (man.equals("George"))
-                manPrefList = georgePrefList;
+                manPrefList = man2PrefList;
             else if (man.equals("John"))
-                manPrefList = johnPrefList;
+                manPrefList = man3PrefList;
             else if (woman.equals("Robert"))
-                manPrefList = robertPrefList;
-            else manPrefList = stephanPrefList;
+                manPrefList = man4PrefList;
+            else manPrefList = man5PrefList;
             
             if (!engagedMenList.contains(man)) {
                 engagedWomenList.add(woman);
@@ -196,72 +196,72 @@ public class StableMatching {
         System.out.println("The men's preferences are as follows:");
         System.out.print(menList.get(0)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(brianPrefList.get(i)+", ");
+            System.out.print(man1PrefList.get(i)+", ");
         System.out.print("\n");
         System.out.print(menList.get(1)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(georgePrefList.get(i)+", ");
+            System.out.print(man2PrefList.get(i)+", ");
         System.out.print("\n");
         System.out.print(menList.get(2)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(johnPrefList.get(i)+", ");
+            System.out.print(man3PrefList.get(i)+", ");
         System.out.print("\n");
         System.out.print(menList.get(3)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(robertPrefList.get(i)+", ");
+            System.out.print(man4PrefList.get(i)+", ");
         System.out.print("\n");    
         System.out.print(menList.get(4)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(stephanPrefList.get(i)+", ");
+            System.out.print(man5PrefList.get(i)+", ");
         System.out.print("\n\n");
     }
     public static void listWomenPreferences() {
         System.out.println("The women's preferences are as follows:");
         System.out.print(womenList.get(0)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(annePrefList.get(i)+", ");
+            System.out.print(woman1PrefList.get(i)+", ");
         System.out.print("\n");
         System.out.print(womenList.get(1)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(joycePrefList.get(i)+", ");
+            System.out.print(woman2PrefList.get(i)+", ");
         System.out.print("\n");
         System.out.print(womenList.get(2)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(nancyPrefList.get(i)+", ");
+            System.out.print(woman3PrefList.get(i)+", ");
         System.out.print("\n");
         System.out.print(womenList.get(3)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(patriciaPrefList.get(i)+", ");
+            System.out.print(woman4PrefList.get(i)+", ");
         System.out.print("\n");
         System.out.print(womenList.get(4)+": ");
         for (int i = 0; i < 5; i++)
-            System.out.print(susanPrefList.get(i)+", ");
+            System.out.print(woman5PrefList.get(i)+", ");
         System.out.print("\n\n");
     }
     public static void fillMenPreferences() throws Exception {
         Scanner fileIn = new Scanner(dataFile);
         for (int i = 0; i < 15; i++) fileIn.next();
-        for (int i = 0; i < 5; i++) johnPrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) man3PrefList.add(fileIn.next());
         fileIn.next();
-        for (int i = 0; i < 5; i++) robertPrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) man4PrefList.add(fileIn.next());
         fileIn.next();
-        for (int i = 0; i < 5; i++) brianPrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) man1PrefList.add(fileIn.next());
         fileIn.next();
-        for (int i = 0; i < 5; i++) stephanPrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) man5PrefList.add(fileIn.next());
         fileIn.next();
-        for (int i = 0; i < 5; i++) georgePrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) man2PrefList.add(fileIn.next());
     }
     public static void fillWomenPreferences() throws Exception {
         Scanner fileIn = new Scanner(dataFile);
         for (int i = 0; i < 48; i++) fileIn.next();
-        for (int i = 0; i < 5; i++) nancyPrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) woman3PrefList.add(fileIn.next());
         fileIn.next();
-        for (int i = 0; i < 5; i++) joycePrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) woman2PrefList.add(fileIn.next());
         fileIn.next();
-        for (int i = 0; i < 5; i++) patriciaPrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) woman4PrefList.add(fileIn.next());
         fileIn.next();
-        for (int i = 0; i < 5; i++) annePrefList.add(fileIn.next());
+        for (int i = 0; i < 5; i++) woman1PrefList.add(fileIn.next());
         fileIn.next();
-        for (int i = 0; i < 5; i++) susanPrefList.add(fileIn.next());  
+        for (int i = 0; i < 5; i++) woman5PrefList.add(fileIn.next());  
     }
 }
